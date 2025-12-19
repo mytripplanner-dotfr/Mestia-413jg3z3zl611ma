@@ -1,0 +1,426 @@
+
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'Appel des Cimes : Aventure Hivernale en Svanétie </title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+      tailwind.config = {
+          theme: {
+              extend: {
+                  colors: {
+                      template: {
+                          sable: '#FFEDD5', 
+                          ocre: '#F97316',   // Orange Vibrant (Brand Accent)
+                          roche: '#0F172A',  // Bleu Nuit (Brand Dark)
+                          ciel: '#0D9488',   // Vert Lagon (Brand Primary)
+                          bg: '#FFF7ED'      // C'est un blanc cassé chaud, parfait pour la lecture et le contraste.
+                      }
+                  },
+                  fontFamily: {
+                      sans: ['"Plus Jakarta Sans"', 'sans-serif'], // Nouvelle police corps
+                      serif: ['"Outfit"', 'sans-serif'],           // Nouvelle police titres
+                  }
+              }
+          }
+      }
+    </script>
+    <style>
+        body { overflow-x: hidden; }
+        
+        /* 2. FORÇAGE DES GRAISSES (Comme sur la Landing Page) */
+        .font-sans { font-weight: 600 !important; }
+        .font-serif { font-weight: 800 !important; }
+
+        /* Ligne verticale de la timeline */
+        .timeline-line {
+            position: absolute;
+            left: 24px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #E5E7EB;
+            z-index: 0;
+        }
+
+        @media (min-width: 768px) {
+            .timeline-line { left: 50%; margin-left: -1px; }
+        }
+
+        /* Style des cartes Info */
+        .tip-card {
+            border-left: 4px solid #F97316; /* ocre */
+            background-color: #FFF7ED;
+        }
+
+        /* Masquer la scrollbar de la nav mobile tout en gardant le scroll */
+        .hide-scroll::-webkit-scrollbar { display: none; }
+        .hide-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-template-bg text-template-roche antialiased">
+    
+    <nav id="nav-desktop" class="hidden md:flex fixed top-0 w-full z-50 bg-white/90 backdrop-blur border-b border-gray-200 py-4 px-8 justify-between items-center shadow-sm transition-transform duration-300 -translate-y-full">
+        <a href="#top" class="text-xl font-serif font-bold tracking-widest text-template-roche">MyTrip<span class="text-template-ocre">Planner</span></a>
+        <div class="space-x-6 text-sm font-bold text-gray-600">
+            <a href="#jour-1" class="nav-item-desktop hover:text-template-ocre transition">Le Parcours</a>
+            <a href="#pratique" class="nav-item-desktop hover:text-template-ocre transition">Infos Pratiques</a>
+        </div>
+    </nav>
+
+    <nav id="nav-mobile" class="md:hidden fixed top-0 w-full z-50 bg-white/95 backdrop-blur border-b border-gray-200 py-3 pl-4 overflow-x-auto hide-scroll whitespace-nowrap shadow-md transition-transform duration-300 -translate-y-full">
+        <div class="flex space-x-2 pr-4" id="mobile-menu-container">
+            <a href="#top" class="inline-block px-3 py-1 bg-template-roche text-white rounded-full text-xs font-bold shadow-sm">Top</a>
+            
+                <a href="#jour-1" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J1 Arrivée en Svanétie et Premiers Pas à Mestia</a>
+            
+                <a href="#jour-2" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J2 Immersion Culturelle et Historique Svan</a>
+            
+                <a href="#jour-3" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J3 Panoramas Hivernaux et Aventure à Hatsvali</a>
+            
+                <a href="#jour-4" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J4 Excursion au Village de Légende d'Ushguli</a>
+            
+                <a href="#jour-5" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J5 Artisanat Local et Douceur Svanète</a>
+            
+                <a href="#jour-6" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J6 Départ de Mestia</a>
+            
+            <a href="#pratique" class="mobile-link inline-block px-3 py-1 border border-gray-300 text-gray-500 rounded-full text-xs font-bold">Infos</a>
+        </div>
+    </nav>
+
+    <header id="top" class="relative h-[60vh] flex items-center justify-center bg-cover bg-center"
+            style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url('https://raw.githubusercontent.com/mytripplanner-dotfr/Mestia-413jg3z3zl611ma/main/header.png" || 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2021'}');">
+        
+        <div class="relative z-20 text-center text-white px-4 max-w-3xl animate-fade-in-up">
+            <p class="font-sans text-template-sable tracking-[0.2em] mb-4 uppercase text-xs font-bold">Feuille de Route</p>
+            <h1 class="font-serif text-5xl md:text-8xl mb-6 leading-tight drop-shadow-lg">MESTIA</h1>
+            <p class="font-sans text-lg md:text-xl text-gray-100 mb-10 font-medium max-w-2xl mx-auto leading-relaxed">L'Appel des Cimes : Aventure Hivernale en Svanétie</p>
+            
+            <div class="flex flex-wrap justify-center gap-4 text-sm font-bold mb-10">
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">🗓️ Du 2 au 7 Janvier 2026</span>
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">💰 980€</span>
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">🛬 Environ 7h depuis Reynaud, Italie (via Milan/Kutaisi) avec escale, plus 5-6h de route.</span>
+            </div>
+        </div>
+    </header>
+
+    <section id="itineraire" class="max-w-6xl mx-auto px-4 py-16 relative">
+      <div class="text-center mb-16">
+            <h2 class="text-template-ocre font-bold tracking-normal text-4xl mt-2 uppercase font-serif">Votre Roadtrip</h2>
+      </div>
+
+        <div class="relative">
+            <div class="timeline-line"></div>
+            
+                <div id="jour-1" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 1</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Arrivée en Svanétie et Premiers Pas à Mestia</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Après un voyage qui vous mènera des plaines italiennes aux sommets enneigés du Caucase, vous atteindrez Mestia, le cœur de la Svanétie. Cette première journée sera dédiée à l'acclimatation et à une douce immersion dans l'atmosphère unique de ce village de montagne. Laissez-vous envelopper par la majesté des paysages hivernaux et la sérénité des lieux.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🛬 <strong>Arrivée à Mestia et installation</strong>: Après votre vol vers Kutaisi et le trajet en "marshrutka" (minibus local) ou taxi partagé, installez-vous confortablement dans votre hôtel 3 étoiles au cœur de Mestia. Prenez le temps de vous reposer et de vous préparer pour l'aventure.</li><li>🚶‍♂️ <strong>Balade légère dans le centre de Mestia</strong>: Profitez de la fin d'après-midi pour une première découverte à pied des environs de votre hôtel. Admirez les tours svanes emblématiques qui se dressent fièrement contre le ciel hivernal et imprégnez-vous de l'ambiance locale.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Mestia-413jg3z3zl611ma/main/jour1.jpg" class="w-full h-64 object-cover" alt="Jour 1">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">ℹ️ Conseil Transport</p>
+                                <p class="text-gray-700">Le trajet Kutaisi-Mestia est long (environ 5-6h). Prévoyez des snacks et de l'eau. Les "marshrutkas" partent généralement quand elles sont pleines.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🌡️ Météo Hivernale</p>
+                                <p class="text-gray-700">En janvier, les températures à Mestia peuvent être très froides, souvent négatives. Des vêtements chauds, imperméables et des chaussures de marche robustes sont indispensables.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-2" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 2</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Immersion Culturelle et Historique Svan</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Cette journée est consacrée à la découverte approfondie de l'histoire et de la culture fascinante de la Svanétie. Vous explorerez les tours défensives ancestrales et les trésors du musée local, témoins d'un passé riche et d'une identité montagnarde préservée. Laissez-vous conter les légendes de cette région isolée et de ses habitants résilients.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🏛️ <strong>Visite du Musée d'Histoire et d'Ethnographie de Svanétie</strong>: Plongez dans le passé de la région en explorant ce musée riche en icônes, manuscrits anciens et objets ethnographiques. C'est une excellente introduction à la culture svan et à son héritage unique.</li><li>🚶‍♀️ <strong>Exploration des tours svanes et du quartier de Lanchvali</strong>: Promenez-vous dans les ruelles de Mestia pour admirer de près les célèbres tours svanes, symboles de la région. Certaines sont accessibles et offrent un aperçu de la vie médiévale et des systèmes de défense familiaux.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Mestia-413jg3z3zl611ma/main/jour2.jpg" class="w-full h-64 object-cover" alt="Jour 2">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🗣️ Langue Locale</p>
+                                <p class="text-gray-700">Les Svanes ont leur propre langue, le svan, distincte du géorgien. Cependant, le géorgien est la langue officielle et le russe est souvent compris par les générations plus âgées.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">📸 Photographie</p>
+                                <p class="text-gray-700">Les tours svanes offrent des opportunités photographiques incroyables, surtout avec la neige. N'hésitez pas à demander la permission avant de photographier les habitants.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-3" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 3</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Panoramas Hivernaux et Aventure à Hatsvali</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Aujourd'hui, l'appel de la montagne se fait sentir. Vous prendrez de la hauteur pour admirer des panoramas à couper le souffle sur les sommets enneigés du Caucase. Que vous soyez skieur ou simple contemplatif, la station de Hatsvali offre une expérience mémorable, combinant sport, nature et vues imprenables. Une bouffée d'air pur garantie.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🚠 <strong>Montée en télésiège à Hatsvali</strong>: Prenez un taxi local pour rejoindre la station de ski de Hatsvali, située à quelques kilomètres de Mestia. Le télésiège vous emmènera à une altitude offrant des vues spectaculaires sur le mont Ushba et les montagnes environnantes.</li><li>☕ <strong>Pause café avec vue panoramique</strong>: Au sommet de Hatsvali, profitez d'une boisson chaude dans le café d'altitude. C'est l'endroit idéal pour se réchauffer tout en admirant le paysage grandiose et les pistes de ski enneigées.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Mestia-413jg3z3zl611ma/main/jour3.jpg" class="w-full h-64 object-cover" alt="Jour 3">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🎿 Activités Hivernales</p>
+                                <p class="text-gray-700">Si vous aimez le ski ou le snowboard, Hatsvali propose des pistes pour tous les niveaux. Vous pouvez louer du matériel sur place.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🥾 Chaussures</p>
+                                <p class="text-gray-700">Même si vous ne skiez pas, des chaussures imperméables et antidérapantes sont essentielles pour marcher dans la neige au sommet.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-4" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 4</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Excursion au Village de Légende d'Ushguli</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Préparez-vous pour une journée d'aventure vers Ushguli, l'un des villages habités les plus hauts d'Europe et classé au patrimoine mondial de l'UNESCO. Le trajet est une expérience en soi, traversant des paysages sauvages et immaculés. Une fois sur place, vous serez transporté dans un autre temps, au milieu de tours médiévales et de vues imprenables sur le mont Shkhara.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🚗 <strong>Excursion en 4x4 vers Ushguli</strong>: Louez un 4x4 avec chauffeur (souvent partagé avec d'autres voyageurs) pour une journée inoubliable vers Ushguli. La route est pittoresque mais exigeante, surtout en hiver, offrant des vues spectaculaires sur la vallée.</li><li>⛪ <strong>Découverte du complexe d'Ushguli et de l'église Lamaria</strong>: Explorez les quatre hameaux qui composent Ushguli, avec leurs tours svanes caractéristiques. Visitez l'église Lamaria du 10ème siècle, nichée au pied du mont Shkhara, le plus haut sommet de Géorgie.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Mestia-413jg3z3zl611ma/main/jour4.jpg" class="w-full h-64 object-cover" alt="Jour 4">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">⚠️ Accès Hivernal</p>
+                                <p class="text-gray-700">En hiver, la route vers Ushguli peut être difficilement praticable ou fermée en cas de fortes chutes de neige. Renseignez-vous la veille auprès de votre hôtel ou des locaux.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💰 Coût du 4x4</p>
+                                <p class="text-gray-700">Le prix d'un 4x4 pour Ushguli est généralement fixe par véhicule. Partager les frais avec d'autres voyageurs est une bonne option pour réduire le coût par personne.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-5" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 5</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Artisanat Local et Douceur Svanète</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Pour cette dernière journée complète en Svanétie, prenez le temps de vous imprégner une dernière fois de l'atmosphère unique de Mestia. Flânez dans les rues, découvrez l'artisanat local et savourez les saveurs de la cuisine géorgienne. C'est l'occasion de ramener un souvenir authentique et de profiter d'un rythme plus doux avant le départ.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🎁 <strong>Achat de souvenirs et artisanat local</strong>: Explorez les petites boutiques de Mestia pour trouver des souvenirs uniques. Vous y trouverez des objets en feutre, des bijoux faits main, des produits locaux comme le sel de Svanétie ou des icônes.</li><li>🚶‍♂️ <strong>Promenade le long de la rivière Mestiachala</strong>: Profitez d'une dernière balade relaxante le long de la rivière Mestiachala. Les paysages enneigés et le son de l'eau offrent un moment de quiétude parfait pour clôturer votre séjour en Svanétie.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Mestia-413jg3z3zl611ma/main/jour5.jpg" class="w-full h-64 object-cover" alt="Jour 5">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🌶️ Sel de Svanétie</p>
+                                <p class="text-gray-700">Le "Svanetian Salt" est un mélange d'épices unique, idéal pour rehausser vos plats. C'est un excellent souvenir culinaire à rapporter.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🍽️ Cuisine Locale</p>
+                                <p class="text-gray-700">Ne partez pas sans avoir goûté le "Kubdari" (pain farci à la viande) et le "Tashmijabi" (purée de pommes de terre et fromage), des spécialités svanes.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-6" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 6</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Départ de Mestia</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">C'est le moment de dire au revoir à la magnifique Svanétie. Après un dernier petit-déjeuner montagnard, vous entamerez le chemin du retour, emportant avec vous des souvenirs impérissables des paysages grandioses et de l'hospitalité géorgienne. Le trajet vers l'aéroport sera l'occasion de revoir une dernière fois les sommets enneigés.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🍳 <strong>Petit-déjeuner et préparation au départ</strong>: Profitez d'un dernier petit-déjeuner géorgien à votre hôtel. Vérifiez que vous n'avez rien oublié et préparez vos bagages pour le long trajet de retour.</li><li>🚌 <strong>Trajet retour Mestia - Kutaisi et vol</strong>: Reprenez une "marshrutka" ou un taxi partagé de Mestia vers l'aéroport de Kutaisi pour votre vol de retour vers l'Italie. Prévoyez une marge de temps suffisante pour le trajet.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Mestia-413jg3z3zl611ma/main/jour6.jpg" class="w-full h-64 object-cover" alt="Jour 6">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">⏰ Timing</p>
+                                <p class="text-gray-700">Le trajet Mestia-Kutaisi prend environ 5-6 heures. Assurez-vous de partir suffisamment tôt pour ne pas manquer votre vol.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🤝 Hospitalité</p>
+                                <p class="text-gray-700">Les Géorgiens sont réputés pour leur hospitalité. N'hésitez pas à échanger avec les locaux, même avec la barrière de la langue, cela enrichira votre expérience.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+    </section>
+
+    <section id="pratique" class="bg-white border-t border-gray-200 pt-12 pb-12 scroll-mt-24">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-10">
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>💴</span> Budget
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget vol: </strong>350€/pers (Vol A/R Reynaud (via Milan) - Kutaisi en classe économique avec bagage en soute)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget transports: </strong>120€/pers (Marshrutka A/R Kutaisi-Mestia, taxis locaux, 4x4 partagé pour Ushguli)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget repas: </strong>150€/pers (5 jours de repas, environ 30€/jour pour une cuisine locale généreuse)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget logement: </strong>300€/pers (5 nuits en hôtel 3 étoiles, environ 60€/nuit)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget activités: </strong>60€/pers (Musée, tours svanes, télésiège Hatsvali, participation Ushguli)</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>☀️</span> Périodes Idéales
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">Les périodes idéales pour ce séjour hivernal sont les mois de Décembre, Janvier et Février.</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>📃</span> Infos pratiques
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">👥 La Svanétie est habitée par les Svanes, un groupe ethnique géorgien avec une culture, une langue et des traditions distinctes. Leur hospitalité est légendaire.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">🇬🇪 La Géorgie est un pays du Caucase, à la croisée de l'Europe et de l'Asie. C'est le berceau du vin et un pays à l'histoire millénaire, avec une forte identité orthodoxe.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">🏰 Les tours svanes, emblématiques de la région, étaient des structures défensives familiales. Chaque famille en possédait une, servant de refuge en cas d'invasion ou de vendetta.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">🍷 Le "Supra" est le festin traditionnel géorgien, dirigé par un "Tamada" (maître de cérémonie) qui propose des toasts. C'est une expérience culturelle incontournable.</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>🔗</span> Liens Utiles
+                </h4>
+                <ul class="text-sm space-y-3">
+                  <li><a href="https://mytripplanner-dotfr.github.io/Mestia-413jg3z3zl611ma/map.html" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🗺️ Carte Interactive</strong></a></li>
+                    
+                        <li><a href="https://georgia.travel/" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>📘 Georgian National Tourism Administration</strong></a></li>
+                    
+                        <li><a href="https://www.accuweather.com/en/ge/mestia/112607/weather-forecast/112607" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🌤️ Météo Mestia</strong></a></li>
+                    
+                        <li><a href="https://wizzair.com/" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>✈️ Wizz Air</strong></a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-50 border-t border-slate-200 py-6">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <p class="font-serif text-lg text-template-roche mb-2 font-bold">
+                MyTrip<span class="text-template-ocre">Planner</span>
+            </p>
+
+                <div class="flex justify-center gap-4 text-[10px] md:text-xs text-slate-500 mb-4 font-semibold">
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">Mentions Légales</a>
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">CGU</a>
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">Confidentialité</a>
+                </div>
+
+            <p class="text-[10px] text-gray-400 mb-2">
+                &copy; 2025 MyTripPlanner. Tous droits réservés.
+            </p>
+
+            <div class="flex justify-center">
+                <p class="text-[10px] text-gray-400 uppercase tracking-widest px-2 py-0.5 border border-gray-200 rounded-full inline-block">
+                    🤖 Contenu généré par IA
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Gestion Scroll & Menu
+        const navDesktop = document.getElementById('nav-desktop');
+        const navMobile = document.getElementById('nav-mobile');
+        
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                navDesktop.classList.remove('-translate-y-full');
+                navMobile.classList.remove('-translate-y-full');
+            } else {
+                navDesktop.classList.add('-translate-y-full');
+                navMobile.classList.add('-translate-y-full');
+            }
+        });
+
+        // Active Link Highlighter
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const activeId = entry.target.id;
+                    document.querySelectorAll('.mobile-link').forEach(link => {
+                        const linkHref = link.getAttribute('href').substring(1);
+                        if (linkHref === activeId) {
+                            link.classList.remove('bg-gray-100', 'text-gray-700');
+                            link.classList.add('bg-template-ocre', 'text-white', 'shadow-md');
+                            link.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+                        } else {
+                            link.classList.add('bg-gray-100', 'text-gray-700');
+                            link.classList.remove('bg-template-ocre', 'text-white', 'shadow-md');
+                        }
+                    });
+                }
+            });
+        }, { rootMargin: '-40% 0px -60% 0px' });
+
+        document.querySelectorAll('div[id^="jour-"], section#pratique').forEach(s => observer.observe(s));
+    </script>
+</body>
+</html>
