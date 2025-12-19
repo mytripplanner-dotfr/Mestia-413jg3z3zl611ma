@@ -1,0 +1,229 @@
+{
+  "pays": "Géorgie",
+  "drapeau": "🇬🇪",
+  "symbole": "🏔️",
+  "titre": "L'Appel des Cimes : Aventure Hivernale en Svanétie",
+  "budget_total": "980€",
+  "duree": "5 jours",
+  "date_debut": "2026-01-02",
+  "date_fin": "2026-01-07",
+  "temps_vol": "Environ 7h depuis Reynaud, Italie (via Milan/Kutaisi) avec escale, plus 5-6h de route."
+  ,
+  "jours": [
+    {
+      "jour": 1,
+      "symbole": "🛬",
+      "titre": "Arrivée en Svanétie et Premiers Pas à Mestia",
+      "legende": "Après un voyage qui vous mènera des plaines italiennes aux sommets enneigés du Caucase, vous atteindrez Mestia, le cœur de la Svanétie. Cette première journée sera dédiée à l'acclimatation et à une douce immersion dans l'atmosphère unique de ce village de montagne. Laissez-vous envelopper par la majesté des paysages hivernaux et la sérénité des lieux.",
+      "lieu": "Mestia",
+      "activites": [
+        "🛬 <strong>Arrivée à Mestia et installation</strong>: Après votre vol vers Kutaisi et le trajet en \"marshrutka\" (minibus local) ou taxi partagé, installez-vous confortablement dans votre hôtel 3 étoiles au cœur de Mestia. Prenez le temps de vous reposer et de vous préparer pour l'aventure.",
+        "🚶‍♂️ <strong>Balade légère dans le centre de Mestia</strong>: Profitez de la fin d'après-midi pour une première découverte à pied des environs de votre hôtel. Admirez les tours svanes emblématiques qui se dressent fièrement contre le ciel hivernal et imprégnez-vous de l'ambiance locale."
+      ],
+      "illustration": "jour1.jpg",
+      "encarts": [
+        {
+          "symbole": "ℹ️",
+          "titre": "Conseil Transport",
+          "texte": "Le trajet Kutaisi-Mestia est long (environ 5-6h). Prévoyez des snacks et de l'eau. Les \"marshrutkas\" partent généralement quand elles sont pleines."
+        },
+        {
+          "symbole": "🌡️",
+          "titre": "Météo Hivernale",
+          "texte": "En janvier, les températures à Mestia peuvent être très froides, souvent négatives. Des vêtements chauds, imperméables et des chaussures de marche robustes sont indispensables."
+        }
+      ]
+    },
+    {
+      "jour": 2,
+      "symbole": "🏰",
+      "titre": "Immersion Culturelle et Historique Svan",
+      "legende": "Cette journée est consacrée à la découverte approfondie de l'histoire et de la culture fascinante de la Svanétie. Vous explorerez les tours défensives ancestrales et les trésors du musée local, témoins d'un passé riche et d'une identité montagnarde préservée. Laissez-vous conter les légendes de cette région isolée et de ses habitants résilients.",
+      "lieu": "Mestia",
+      "activites": [
+        "🏛️ <strong>Visite du Musée d'Histoire et d'Ethnographie de Svanétie</strong>: Plongez dans le passé de la région en explorant ce musée riche en icônes, manuscrits anciens et objets ethnographiques. C'est une excellente introduction à la culture svan et à son héritage unique.",
+        "🚶‍♀️ <strong>Exploration des tours svanes et du quartier de Lanchvali</strong>: Promenez-vous dans les ruelles de Mestia pour admirer de près les célèbres tours svanes, symboles de la région. Certaines sont accessibles et offrent un aperçu de la vie médiévale et des systèmes de défense familiaux."
+      ],
+      "illustration": "jour2.jpg",
+      "encarts": [
+        {
+          "symbole": "🗣️",
+          "titre": "Langue Locale",
+          "texte": "Les Svanes ont leur propre langue, le svan, distincte du géorgien. Cependant, le géorgien est la langue officielle et le russe est souvent compris par les générations plus âgées."
+        },
+        {
+          "symbole": "📸",
+          "titre": "Photographie",
+          "texte": "Les tours svanes offrent des opportunités photographiques incroyables, surtout avec la neige. N'hésitez pas à demander la permission avant de photographier les habitants."
+        }
+      ]
+    },
+    {
+      "jour": 3,
+      "symbole": "⛷️",
+      "titre": "Panoramas Hivernaux et Aventure à Hatsvali",
+      "legende": "Aujourd'hui, l'appel de la montagne se fait sentir. Vous prendrez de la hauteur pour admirer des panoramas à couper le souffle sur les sommets enneigés du Caucase. Que vous soyez skieur ou simple contemplatif, la station de Hatsvali offre une expérience mémorable, combinant sport, nature et vues imprenables. Une bouffée d'air pur garantie.",
+      "lieu": "Hatsvali",
+      "activites": [
+        "🚠 <strong>Montée en télésiège à Hatsvali</strong>: Prenez un taxi local pour rejoindre la station de ski de Hatsvali, située à quelques kilomètres de Mestia. Le télésiège vous emmènera à une altitude offrant des vues spectaculaires sur le mont Ushba et les montagnes environnantes.",
+        "☕ <strong>Pause café avec vue panoramique</strong>: Au sommet de Hatsvali, profitez d'une boisson chaude dans le café d'altitude. C'est l'endroit idéal pour se réchauffer tout en admirant le paysage grandiose et les pistes de ski enneigées."
+      ],
+      "illustration": "jour3.jpg",
+      "encarts": [
+        {
+          "symbole": "🎿",
+          "titre": "Activités Hivernales",
+          "texte": "Si vous aimez le ski ou le snowboard, Hatsvali propose des pistes pour tous les niveaux. Vous pouvez louer du matériel sur place."
+        },
+        {
+          "symbole": "🥾",
+          "titre": "Chaussures",
+          "texte": "Même si vous ne skiez pas, des chaussures imperméables et antidérapantes sont essentielles pour marcher dans la neige au sommet."
+        }
+      ]
+    },
+    {
+      "jour": 4,
+      "symbole": "🏞️",
+      "titre": "Excursion au Village de Légende d'Ushguli",
+      "legende": "Préparez-vous pour une journée d'aventure vers Ushguli, l'un des villages habités les plus hauts d'Europe et classé au patrimoine mondial de l'UNESCO. Le trajet est une expérience en soi, traversant des paysages sauvages et immaculés. Une fois sur place, vous serez transporté dans un autre temps, au milieu de tours médiévales et de vues imprenables sur le mont Shkhara.",
+      "lieu": "Ushguli",
+      "activites": [
+        "🚗 <strong>Excursion en 4x4 vers Ushguli</strong>: Louez un 4x4 avec chauffeur (souvent partagé avec d'autres voyageurs) pour une journée inoubliable vers Ushguli. La route est pittoresque mais exigeante, surtout en hiver, offrant des vues spectaculaires sur la vallée.",
+        "⛪ <strong>Découverte du complexe d'Ushguli et de l'église Lamaria</strong>: Explorez les quatre hameaux qui composent Ushguli, avec leurs tours svanes caractéristiques. Visitez l'église Lamaria du 10ème siècle, nichée au pied du mont Shkhara, le plus haut sommet de Géorgie."
+      ],
+      "illustration": "jour4.jpg",
+      "encarts": [
+        {
+          "symbole": "⚠️",
+          "titre": "Accès Hivernal",
+          "texte": "En hiver, la route vers Ushguli peut être difficilement praticable ou fermée en cas de fortes chutes de neige. Renseignez-vous la veille auprès de votre hôtel ou des locaux."
+        },
+        {
+          "symbole": "💰",
+          "titre": "Coût du 4x4",
+          "texte": "Le prix d'un 4x4 pour Ushguli est généralement fixe par véhicule. Partager les frais avec d'autres voyageurs est une bonne option pour réduire le coût par personne."
+        }
+      ]
+    },
+    {
+      "jour": 5,
+      "symbole": "🛍️",
+      "titre": "Artisanat Local et Douceur Svanète",
+      "legende": "Pour cette dernière journée complète en Svanétie, prenez le temps de vous imprégner une dernière fois de l'atmosphère unique de Mestia. Flânez dans les rues, découvrez l'artisanat local et savourez les saveurs de la cuisine géorgienne. C'est l'occasion de ramener un souvenir authentique et de profiter d'un rythme plus doux avant le départ.",
+      "lieu": "Mestia",
+      "activites": [
+        "🎁 <strong>Achat de souvenirs et artisanat local</strong>: Explorez les petites boutiques de Mestia pour trouver des souvenirs uniques. Vous y trouverez des objets en feutre, des bijoux faits main, des produits locaux comme le sel de Svanétie ou des icônes.",
+        "🚶‍♂️ <strong>Promenade le long de la rivière Mestiachala</strong>: Profitez d'une dernière balade relaxante le long de la rivière Mestiachala. Les paysages enneigés et le son de l'eau offrent un moment de quiétude parfait pour clôturer votre séjour en Svanétie."
+      ],
+      "illustration": "jour5.jpg",
+      "encarts": [
+        {
+          "symbole": "🌶️",
+          "titre": "Sel de Svanétie",
+          "texte": "Le \"Svanetian Salt\" est un mélange d'épices unique, idéal pour rehausser vos plats. C'est un excellent souvenir culinaire à rapporter."
+        },
+        {
+          "symbole": "🍽️",
+          "titre": "Cuisine Locale",
+          "texte": "Ne partez pas sans avoir goûté le \"Kubdari\" (pain farci à la viande) et le \"Tashmijabi\" (purée de pommes de terre et fromage), des spécialités svanes."
+        }
+      ]
+    },
+    {
+      "jour": 6,
+      "symbole": "🛫",
+      "titre": "Départ de Mestia",
+      "legende": "C'est le moment de dire au revoir à la magnifique Svanétie. Après un dernier petit-déjeuner montagnard, vous entamerez le chemin du retour, emportant avec vous des souvenirs impérissables des paysages grandioses et de l'hospitalité géorgienne. Le trajet vers l'aéroport sera l'occasion de revoir une dernière fois les sommets enneigés.",
+      "lieu": "Mestia / Kutaisi",
+      "activites": [
+        "🍳 <strong>Petit-déjeuner et préparation au départ</strong>: Profitez d'un dernier petit-déjeuner géorgien à votre hôtel. Vérifiez que vous n'avez rien oublié et préparez vos bagages pour le long trajet de retour.",
+        "🚌 <strong>Trajet retour Mestia - Kutaisi et vol</strong>: Reprenez une \"marshrutka\" ou un taxi partagé de Mestia vers l'aéroport de Kutaisi pour votre vol de retour vers l'Italie. Prévoyez une marge de temps suffisante pour le trajet."
+      ],
+      "illustration": "jour6.jpg",
+      "encarts": [
+        {
+          "symbole": "⏰",
+          "titre": "Timing",
+          "texte": "Le trajet Mestia-Kutaisi prend environ 5-6 heures. Assurez-vous de partir suffisamment tôt pour ne pas manquer votre vol."
+        },
+        {
+          "symbole": "🤝",
+          "titre": "Hospitalité",
+          "texte": "Les Géorgiens sont réputés pour leur hospitalité. N'hésitez pas à échanger avec les locaux, même avec la barrière de la langue, cela enrichira votre expérience."
+        }
+      ]
+    }
+  ],
+  "detail_budget": [
+    {
+      "titre": "Budget vol:",
+      "legende": "350€/pers (Vol A/R Reynaud (via Milan) - Kutaisi en classe économique avec bagage en soute)",
+      "symbole": "🛬"
+    },
+    {
+      "titre": "Budget transports:",
+      "legende": "120€/pers (Marshrutka A/R Kutaisi-Mestia, taxis locaux, 4x4 partagé pour Ushguli)",
+      "symbole": "🚆"
+    },
+    {
+      "titre": "Budget repas:",
+      "legende": "150€/pers (5 jours de repas, environ 30€/jour pour une cuisine locale généreuse)",
+      "symbole": "🥗"
+    },
+    {
+      "titre": "Budget logement:",
+      "legende": "300€/pers (5 nuits en hôtel 3 étoiles, environ 60€/nuit)",
+      "symbole": "🛏️"
+    },
+    {
+      "titre": "Budget activités:",
+      "legende": "60€/pers (Musée, tours svanes, télésiège Hatsvali, participation Ushguli)",
+      "symbole": "🎭"
+    }
+  ],
+  "periodes_ideales": [
+    {
+      "titre": "Les périodes idéales pour ce séjour hivernal sont les mois de Décembre, Janvier et Février.",
+      "symbole": "❄️"
+    }
+  ],
+  "infos_pratiques": [
+    {
+      "titre": "La Svanétie est habitée par les Svanes, un groupe ethnique géorgien avec une culture, une langue et des traditions distinctes. Leur hospitalité est légendaire.",
+      "symbole": "👥"
+    },
+    {
+      "titre": "La Géorgie est un pays du Caucase, à la croisée de l'Europe et de l'Asie. C'est le berceau du vin et un pays à l'histoire millénaire, avec une forte identité orthodoxe.",
+      "symbole": "🇬🇪"
+    },
+    {
+      "titre": "Les tours svanes, emblématiques de la région, étaient des structures défensives familiales. Chaque famille en possédait une, servant de refuge en cas d'invasion ou de vendetta.",
+      "symbole": "🏰"
+    },
+    {
+      "titre": "Le \"Supra\" est le festin traditionnel géorgien, dirigé par un \"Tamada\" (maître de cérémonie) qui propose des toasts. C'est une expérience culturelle incontournable.",
+      "symbole": "🍷"
+    }
+  ],
+  "liens_utiles": [
+    {
+      "legende": "Informations officielles sur le tourisme en Géorgie",
+      "titre": "Georgian National Tourism Administration",
+      "url": "https://georgia.travel/",
+      "symbole": "📘"
+    },
+    {
+      "legende": "Prévisions météo pour Mestia",
+      "titre": "Météo Mestia",
+      "url": "https://www.accuweather.com/en/ge/mestia/112607/weather-forecast/112607",
+      "symbole": "🌤️"
+    },
+    {
+      "legende": "Compagnie aérienne pour les vols vers Kutaisi",
+      "titre": "Wizz Air",
+      "url": "https://wizzair.com/",
+      "symbole": "✈️"
+    }
+  ]
+}
